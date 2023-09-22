@@ -45,6 +45,7 @@ const CSVDisplay = ({ showTable, setShowTable }) => {
   };
 
   return (
+    <>
     <div className="fixed right-0 h-[45%] w-[20%] default-background-color p-6 text-white overflow-y-auto">
       <h1 className="text-xl font-semibold mb-4">Your Database</h1>
       <div className="grid grid-cols-1 md:grid-cols-1 gap-4  justify-center items-center">
@@ -108,6 +109,7 @@ const CSVDisplay = ({ showTable, setShowTable }) => {
         )}
       </Modal>
     </div>
+    </>
   );
 };
 

@@ -129,15 +129,17 @@ const page = () => {
   };
 
   return (
-    <div className={theme === 'light' ? 'light-theme' : 'dark-theme'}>
-      <Navbar handleReset={handleReset} handleExport={handleExport} />
-      <AvailableQueries onSelectQuery={handleSelectQuery} />
-      <Input runQuery={runQuery} query={query} setQuery={setQuery} />
-      <Output result={result} typeofResult={typeofResult} />
-      <History history={history} />
-      <CSVDisplay showTable={showTable} setShowTable={setShowTable} />
-      <ToastContainer />
-    </div>
+    <>
+      <div className={theme === 'light' ? 'light-theme' : 'dark-theme'}>
+        <Navbar handleReset={handleReset} handleExport={handleExport} />
+        <AvailableQueries onSelectQuery={handleSelectQuery} />
+        <Input runQuery={runQuery} query={query} setQuery={setQuery} />
+        <Output result={result} typeofResult={typeofResult} />
+        <History history={history} />
+        <CSVDisplay showTable={showTable} setShowTable={setShowTable} />
+        <ToastContainer />
+      </div>
+    </>
   );
 };
 

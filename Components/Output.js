@@ -2,6 +2,7 @@ import React from 'react';
 
 const Output = ({ result }) => {
   return (
+    <>
     <div className="fixed left-72 top-1/2 h-[60%] w-[64%] bg-[#212224] p-4">
       <h1 className='text-white font-bold text-2xl'>Output</h1>
       <div className="overflow-auto">
@@ -45,6 +46,7 @@ const Output = ({ result }) => {
         )}
       </div>
     </div>
+    </>
   );
 };
 
