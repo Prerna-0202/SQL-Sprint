@@ -1,34 +1,91 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## SQL Sprint
+
+SQL Sprint is an online SQL Editor. 
+
+## Features
+
+### Available Databases:
+
+On the top-right section, you will find a section labeled "Your Database" listing all available databases. You can click on these databases to access and review their data.
+
+### Available Queries:
+
+On the far left side, there is a section called "Available Queries," where you can click on the provided queries to input them into the query box.
+
+### Input Box:
+
+At the top center, you'll see an input box with two buttons.
+In the input box, you can write your SQL query. Afterward, click the "Run" button above to execute the query.
+There's also a "Clear" button that clears the input box when clicked.
+
+### Output Box:
+
+In the bottom center, there's an output box where the results of your executed query are displayed.
+
+### History:
+
+The "History" section displays the latest 8 queries you've run.
+
+### Export:
+
+Clicking the "Export" button opens a dropdown menu with three options:
+1. CSV - Clicking this option will download your output as a CSV file.
+2. JSON - Choosing this option will download your output as a JSON file.
+3. XML - Selecting this option will download your output as an XML file.
+
+### Reset:
+
+If you want to reset everything to the initial state, you can use the "Reset" button.
+
+### Mail Support:
+
+By clicking the "Mail" button, you can share your feedback or report any issues you encounter via email.
 
 ## Getting Started
 
-First, run the development server:
+1. First, Install node modules:
+
+```bash
+npm install
+```
+
+2. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech-Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Next.js
+- TailWindCSS
+- Packages Installed
+ -- papaparse , react-toastify
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Page Load Time
 
-## Learn More
+Steps taken to measure the Page Load Time
+1. Open the Chrome Devtools.
+2. Select the "Performance" tab.
+3. Press Ctrl+Shift+E(Windows)
 
-To learn more about Next.js, take a look at the following resources:
+### Page Load Time Before:-
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<img width="50%" height="50%" src="Images/Before.png" >
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Page Load Time After:-
 
-## Deploy on Vercel
+<img width="50%" height="50%" src="Images/After.png" >
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Performance:-
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<img width="50%" height="50%" src="Images/Performance.png" >
+
+
+##  Optimization done to decrease page load time
+
+1. Refactoring of code to separate concerns more clearly, making it easier to maintain and optimize.
+2. Ensured to only import the necessary components and libraries in code. Unused imports can bloat the bundle size.
+3. Used React Fragment (<>...</>) to avoid unnecessary parent elements.
+
+
