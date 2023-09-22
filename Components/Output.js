@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Output = ({ result, typeofResult, handleDownloadCSV }) => {
+const Output = ({ result }) => {
   return (
-    <div className="fixed left-80 top-1/2 h-[60%] w-[64%] bg-[#212224] p-4">
+    <div className="fixed left-72 top-1/2 h-[60%] w-[64%] bg-[#212224] p-4">
       <h1 className='text-white font-bold text-2xl'>Output</h1>
-      <div className="overflow-auto" style={{ maxHeight: 'calc(100% - 48px)' }}>
+      <div className="overflow-auto">
         {result.length > 0 && Array.isArray(result) && (
-          <table className="w-full">
+          <table className="w-[90%]">
             <thead>
               <tr className="bg-[#242528]">
                 {Object.keys(result[0]).map((columnName) => (
@@ -39,7 +39,7 @@ const Output = ({ result, typeofResult, handleDownloadCSV }) => {
           </table>
         )}
         {!Array.isArray(result) && (
-          <div className="bg-[#242528] text-white flex justify-center items-center text-2xl font-bold">
+          <div className="bg-[#242528] text-white flex justify-center items-center top-2/3 text-xl font-bold">
             {result}
           </div>
         )}
@@ -48,4 +48,4 @@ const Output = ({ result, typeofResult, handleDownloadCSV }) => {
   );
 };
 
-export default Output;
+export default Output

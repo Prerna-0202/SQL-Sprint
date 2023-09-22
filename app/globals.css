@@ -7,27 +7,29 @@ body{
   padding: 0;
   scroll-behavior: smooth;
 }
-/* Define styles for light theme */
-.light-theme {
-  background-color: #ffffff;
-  color: #000000;
-}
 
-/* Define styles for dark theme */
-.dark-theme {
-  background-color: #1f2023;
-  color: #ffffff;
-
-  .input-theme {
-    background-color: #1c2130;
-  }
-}
-
-.backg {
+.default-background-color {
   background-color: #26282c;
-
 }
 
-.nav {
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+/* Add this CSS to your component's CSS or a separate CSS file */
+/* Style the main scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+/* Style the track (the area behind the thumb) */
+::-webkit-scrollbar-track {
+  background: #333; /* Color of the track */
+}
+
+/* Style the thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the thumb */
+  border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+/* Change the appearance on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color on hover */
 }

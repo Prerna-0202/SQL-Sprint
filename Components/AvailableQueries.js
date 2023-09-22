@@ -6,26 +6,30 @@ const AvailableQueries = ({ onSelectQuery }) => {
     'SELECT ProductName, ProductID FROM Products;',
     'SELECT * FROM Order_Details ORDER BY Orders;',
     'SELECT * FROM Customers ORDER BY Country, Employees;',
+    'SELECT * FROM Employees;',
     'SELECT SUM(Quantity) FROM Order_Details;',
     'SELECT * FROM Suppliers;',
     'SELECT AVG(Price) FROM Products;',
+    'SELECT * FROM Products;',
     'SELECT AVG(Price) AS [average price] FROM Orders;',
+    'SELECT * FROM Orders;',
+    'SELECT * FROM Order_Details;',
     'SELECT City FROM Customers UNION SELECT City FROM Suppliers ORDER BY Employees;',
-    'SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Order_Details;'
+    'SELECT COUNT(CustomerID), Country FROM GROUP BY Customers;',
   ];
 
   return (
-    <div className="fixed left-0 h-[90%] w-[18%] backg p-4">
-        <h1 className="fixed text-2xl font-semibold mb-4 text-white">Available Queries:</h1>
-      <div className="overflow-y-scroll h-full mt-10">
-        <div className="space-y-4">
+    <div className="fixed left-0 h-[90%] w-72 default-background-color p-2">
+      <h1 className="text-lg sm:text-2xl font-semibold mb-2 sm:mb-4 text-white">Available Queries</h1>
+      <div className="overflow-y-scroll h-[70%] sm:h-[90%] mt-4 sm:mt-10">
+        <div className="space-y-2 sm:space-y-4">
           {queries.map((query, index) => (
             <div
               key={index}
               onClick={() => onSelectQuery(query)}
-              className="p-4 bg-gray-700 rounded-lg shadow-md cursor-pointer hover:shadow-lg transition duration-300"
+              className="p-4 sm:p-4 bg-gray-700 rounded-lg shadow-md cursor-pointer hover:shadow-lg transition duration-300"
             >
-              <p className="text-white hover:underline font-bold">{query}</p>
+              <p className="text-white hover:underline font-bold text-sm sm:text-base">{query}</p>
             </div>
           ))}
         </div>
