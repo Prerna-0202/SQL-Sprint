@@ -5,7 +5,7 @@ const Output = ({ result }) => {
     <>
     <div className="fixed left-72 top-1/2 h-[60%] w-[64%] bg-[#212224] p-4">
       <h1 className='text-white font-bold text-2xl'>Output</h1>
-      <div className="overflow-auto">
+      <div className="overflow-auto" style={{ maxHeight: 'calc(100% - 48px)' }}>
         {result.length > 0 && Array.isArray(result) && (
           <table className="w-[90%]">
             <thead>
@@ -50,4 +50,4 @@ const Output = ({ result }) => {
   );
 };
 
-export default Output
+export default Output;
