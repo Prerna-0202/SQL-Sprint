@@ -8,10 +8,6 @@ body{
   scroll-behavior: smooth;
 }
 
-.default-background-color {
-  background-color: #26282c;
-}
-
 /* Add this CSS to your component's CSS or a separate CSS file */
 /* Style the main scrollbar */
 ::-webkit-scrollbar {
@@ -20,12 +16,12 @@ body{
 
 /* Style the track (the area behind the thumb) */
 ::-webkit-scrollbar-track {
-  background: #333; /* Color of the track */
+  background: rgb(255, 253, 253); /* Color of the track */
 }
 
 /* Style the thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
-  background: #888; /* Color of the thumb */
+  background: #cdcdcd; /* Color of the thumb */
   border-radius: 6px; /* Rounded corners for the thumb */
 }
 

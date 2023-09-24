@@ -46,23 +46,23 @@ const CSVDisplay = ({ showTable, setShowTable }) => {
 
   return (
     <>
-    <div className="fixed right-0 h-[45%] w-[20%] default-background-color p-6 text-white overflow-y-auto">
-      <h1 className="text-xl font-semibold mb-4">Your Database</h1>
+    <div className="fixed right-0 h-[45%] lg:w-[20%] md:w-[27%] p-6 bg-white overflow-y-auto">
+      <h1 className="text-xl font-semibold mb-4 ">Your Database</h1>
       <div className="grid grid-cols-1 md:grid-cols-1 gap-4  justify-center items-center">
-        {["Customers", "Employees", "Order_Details", "Orders", "Products", "Suppliers"].map((tableName, index) => (
+        {["Customers", "Employees", "Details", "Orders", "Products", "Suppliers"].map((tableName, index) => (
           <div
             key={index}
             onClick={() => handleShowTable(tableName.toLowerCase())}
-            className="bg-gray-700 p-4 rounded-lg shadow-md cursor-pointer hover:shadow-lg transition duration-300"
+            className="bg-slate-200 p-4 rounded-lg shadow-md cursor-pointer hover:shadow-lg transition duration-300"
           >
-            <h2 className="text-xl font-semibold mb-2">{tableName}</h2>
-            <p className="text-gray-300">Click to view data</p>
+            <h2 className="lg:text-xl font-semibold mb-2 md:text-sm">{tableName}</h2>
+            <p className=" text-gray-500">Click to view data</p>
           </div>
         ))}
       </div>
       <Modal isOpen={showTable}>
         <button
-          className='fixed top-2 right-4 text-white font-extrabold text-5xl cursor-pointer'
+          className='fixed top-2 right-4 font-extrabold text-5xl cursor-pointer'
           onClick={handleCloseTable}
         >
           X
@@ -74,7 +74,7 @@ const CSVDisplay = ({ showTable, setShowTable }) => {
               <table className="w-full table-auto">
                 <thead>
                   {data.length > 0 && (
-                    <tr className="text-gray-200">
+                    <tr className="text-black">
                       {Object.keys(data[0]).map((columnName) => (
                         <th
                           key={columnName}
@@ -90,7 +90,7 @@ const CSVDisplay = ({ showTable, setShowTable }) => {
                   {data.map((row, index) => (
                     <tr
                       key={index}
-                      className={index % 2 === 0 ? 'bg-[#1E1F22]' : 'bg-[#242528]'}
+                      className={index % 2 === 0 ? ' bg-slate-100' : 'bg-slate-200'}
                     >
                       {Object.values(row).map((value, colIndex) => (
                         <td

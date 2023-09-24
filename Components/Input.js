@@ -8,19 +8,18 @@ const Input = ({ runQuery, query, setQuery }) => {
 
   return (
     <>
-      <div className="fixed left-72 h-[44%] w-[78%] bg-[#212224] p-4">
-        <form onSubmit={runQuery} className="w-full md:w-[80%] h-[100%] p-4 flex flex-col">
-          <div className="flex  justify-start items-center bg-[#1E1F22] text-white py-2 px-4 rounded-t-lg">
-            <button className="text-white text-2xl">SQLite</button>
-            <div className="space-x-2 mx-5">
-              <button type="submit" className="bg-gray-700 text-white px-3 py-1 rounded">Run ▶</button>
-              <button className="bg-gray-700 text-white px-3 py-1 rounded" onClick={handleClearClick}>Clear</button>
-              {/* Add the onClick event handler to the "Clear" button */}
+      <div className="fixed top-14 lg:left-52 lg:h-[44%] lg:w-[80%] md:left-[25%] md:h-[45%] md:w-[60%] bg-white p-4">
+        <form onSubmit={runQuery} className="w-full md:w-[83%] h-[100%] p-4 flex flex-col">
+          <div className="flex justify-between items-center bg-slate-200py-2 px-4 rounded-t-md border border-gray-500">
+            <button className="text-2xl font-bold">Input</button>
+            <div className="lg:space-x-2  md:space-x-1 p-2">
+              <button type="submit" className="bg-slate-200 px-3 py-1 rounded">Run</button>
+              <button className="bg-slate-200  px-3 py-1 rounded" onClick={handleClearClick}>Clear</button>
             </div>
           </div>
           <div className="flex-grow flex flex-col justify-between">
             <textarea
-              className="bg-[#1E1F22] outline-none focus:ring-2 focus:ring-blue-500 h-full w-full my-1 text-white text-xl p-4"
+              className="bg-white outline-none focus:ring-2 focus:ring-blue-500 h-full w-full my-1 text-xl p-4 border border-gray-500"
               value={query}
               onChange={(e) => {
                 setQuery(e.target.value);

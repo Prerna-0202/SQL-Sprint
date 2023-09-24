@@ -7,6 +7,11 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      'md': '200px',
+      'lg': '1400px',
+      // ...
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -16,4 +21,5 @@ module.exports = {
     },
   },
   plugins: [],
+  darkMode: "class",
 }

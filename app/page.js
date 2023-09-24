@@ -130,7 +130,7 @@ const page = () => {
 
   return (
     <>
-      <div className={theme === 'light' ? 'light-theme' : 'dark-theme'}>
+      <div>
         <Navbar handleReset={handleReset} handleExport={handleExport} />
         <AvailableQueries onSelectQuery={handleSelectQuery} />
         <Input runQuery={runQuery} query={query} setQuery={setQuery} />
